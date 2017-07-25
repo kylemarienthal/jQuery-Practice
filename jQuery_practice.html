@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Practice</title>
+    <link rel="stylesheet" href="jQuery_practice.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#addclass').click(function(){
+          $('#redpara').css('background-color','red')
+            })
+          $('#slide_toggle').click(function(){
+            $('#hidden_image').slideToggle('slow')
+          })
+          $('#append').click(function(){
+            $('#appended_para').append('<p>click the button to append a new paragraph</p>')
+          })
+
+          });
+
+
+    </script>
+  </head>
+  <body>
+    <div id='header'>
+      <h1>AddClass</h1>
+      <button id= 'addclass' type="button" name="button">AddClass</button>
+      <p id='redpara'>Click the button to add class 'red' to this paragraph</p>
+    </div>
+
+    <div id='middle_content'>
+      <h1>SlideToggle</h1>
+      <button id= 'slide_toggle' type="button" name="button">Slidetoggle</button>
+      <p id='hidden_image'>Click the button to slidetoggle a hidden image</p>
+    </div>
+
+    <div id='bottom_content'>
+      <h1>Append</h1>
+      <button id= 'append' type="button" name="button">Append</button>
+      <p id='appended_para'>Click the button to append a new paragraph</p>
+    </div>
+
+  </body>
+</html>
