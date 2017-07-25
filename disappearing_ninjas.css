@@ -1,0 +1,25 @@
+.container{
+  width: 652px;
+}
+img{
+  height:180px;
+  /*position: initial;
+  left: 100px;
+  top: 150px;*/
+}
+/*
+#wrapper{
+    width: 700px;
+    height: 900px;
+    background-color: black;
+}
+img{
+  display: inline-block;
+  margin: 5px;
+}
+button{
+  display: block;
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px black;
+  background-color: green;
+}*/
