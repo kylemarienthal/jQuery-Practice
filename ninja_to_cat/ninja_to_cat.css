@@ -1,0 +1,11 @@
+.content{
+  width: 750px;
+}
+
+.content div, .content div img{
+  display: block;
+
+}
+.content div img{
+  margin-top: 5px;
+}
