@@ -15,7 +15,6 @@
           $('.pokemon').append(`<img id='${i}' class='char' src='http://pokeapi.co/media/img/${i}.png'>`);
         };
         $('.pokemon').css('background-color', 'blue')
-        // $('.info').css('position', 'fixed')
       });
     });
 
@@ -28,26 +27,27 @@
         success:function(gimmiecookies){
           $('.info').css('background-color', 'white');
           $('.info').css('border', 'solid thick red');
-
-
+          $('.info').css('position', 'fixed')
           var html = "";
           html += `<h1>${gimmiecookies.name}</h1>`;
-          html += `http://pokeapi.co/media/img/${characterId}`
-          html += <ul>;
+          html += `<img src="http://pokeapi.co/media/img/${characterId}.png">`;
+          html += '<ul>';
           for (var i = 0; i < gimmiecookies.types.length; i++) {
-            html += "<li>" + gimmiecookies.types[i] + "</li>"
-          }
-          html += </ul>;
+            html += "<li>" + gimmiecookies.types[i].name + "</li>"
+          };
+          html += "</ul>";
+          html += "<h4> Height </h4>";
+          html += gimmiecookies.height;
+          html += "<h4> Weight </h4>";
+          html += gimmiecookies.weight;
+          $('.info').html(html)
         }
-          $('.info').html(<h1>gimmiecookies.name</h1>)
-          for (var i = 0; i < gimmiecookies.types.length; i++) {
-            $('.info').append("<h1>" + gimmiecookies.types[i].name +"</h1>");
-          });
-          console.log(gimmiecookies);
-        }
+          // for (var i = 0; i < gimmiecookies.types.length; i++) {
+          //   $('.info').append("<h1>" + gimmiecookies.types[i].name +"</h1>");
+          // });
+        });
       })
       // alert('what up')
-    })
     // name, image, # of types=array.length, height, and weight
   </script>
 </head>
@@ -58,17 +58,7 @@
 
   </div>
   <div class="info">
-    <h1>Pikachu</h1>
-    <img src="http://pokeapi.co/media/img/1.png" alt="">
-    <ul>
-      <li></li>
-    </ul>
-    <ul>
-      <li></li>
-    </ul>
-    <ul>
-      <li></li>
-    </ul>
+
   </div>
 </body>
 
