@@ -11,9 +11,7 @@
       $('form').submit(function() {
         var cityName = document.getelementbyid("search")
         console.log('test');
-        $.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName},US&&appid=1660f7843c731b158a06096b54cf998a`, function(res) {
-        }, 'json');
-        // don't forget to return false so the page doesn't refresh
+        $.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName},US&&appid=1660f7843c731b158a06096b54cf998a`, function(res) {}, 'json');
         return false;
       });
     });
@@ -23,19 +21,12 @@
 <body>
   <div class="wrapper">
     <form class="winter">
-        <input type="text" id="search" placeholder="City Name">
-           <input type="submit" value="Search Weather" id="submit">
+      <input type="text" id="search" placeholder="City Name">
+      <input type="submit" value="Search Weather" id="submit">
 
-      </form>
-
-
-    <!-- <button type="button" name="button">Search Weather</button> -->
-
-
-
+    </form>
     <h1></h1>
     <h2></h2>
-
   </div>
 </body>
 
